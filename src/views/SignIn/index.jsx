@@ -23,9 +23,6 @@ import {
 // Material icons
 import { ArrowBack as ArrowBackIcon } from '@material-ui/icons';
 
-// Shared components
-import { Facebook as FacebookIcon, Google as GoogleIcon } from 'icons';
-
 // Component styles
 import styles from './styles';
 
@@ -188,25 +185,6 @@ class SignIn extends Component {
                   >
                     Sign in with social media
                   </Typography>
-                  <Button
-                    className={classes.facebookButton}
-                    color="primary"
-                    onClick={this.handleSignIn}
-                    size="large"
-                    variant="contained"
-                  >
-                    <FacebookIcon className={classes.facebookIcon} />
-                    Login with Facebook
-                  </Button>
-                  <Button
-                    className={classes.googleButton}
-                    onClick={this.handleSignIn}
-                    size="large"
-                    variant="contained"
-                  >
-                    <GoogleIcon className={classes.googleIcon} />
-                    Login with Google
-                  </Button>
                   <Typography
                     className={classes.sugestion}
                     variant="body1"

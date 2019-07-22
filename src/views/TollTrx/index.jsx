@@ -12,19 +12,28 @@ import { Grid } from '@material-ui/core';
 // Shared layouts
 import { Dashboard as DashboardLayout } from 'layouts';
 
+// Custom components
+import {
+  DragComponent,
+  DropComponent
+} from './components';
+
 // Component styles
 const styles = theme => ({
   root: {
     padding: theme.spacing.unit * 4
+  },
+  item: {
+    height: '110%'
   }
 });
 
-class Settings extends Component {
+class TollTrx extends Component {
   render() {
     const { classes } = this.props;
 
     return (
-      <DashboardLayout title="Settings">
+      <DashboardLayout title="Toll Transaction">
         <div className={classes.root}>
           <Grid
             container
@@ -32,17 +41,21 @@ class Settings extends Component {
           >
             <Grid
               item
-              md={7}
+              lg={3}
+              md={12}
+              xl={3}
               xs={12}
             >
-              <h1>Setting</h1>
+              <DragComponent className={classes.item} />
             </Grid>
             <Grid
               item
-              md={5}
+              lg={9}
+              md={12}
+              xl={9}
               xs={12}
             >
-              
+              <DropComponent className={classes.item} />
             </Grid>
           </Grid>
         </div>
@@ -51,8 +64,8 @@ class Settings extends Component {
   }
 }
 
-Settings.propTypes = {
+TollTrx.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Settings);
+export default withStyles(styles)(TollTrx);
